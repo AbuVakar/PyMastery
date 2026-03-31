@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "allowJs": true,
+    "checkJs": false,
+
+    /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@components/ui/*": ["src/components/ui/*"],
+      "@ui/*": ["src/components/ui/*"],
+      "@pages/*": ["src/pages/*"],
+      "@contexts/*": ["src/contexts/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@types/*": ["src/types/*"],
+      "@styles/*": ["src/styles/*"],
+      "@assets/*": ["src/assets/*"]
+    },
+
+    /* Type declarations */
+    "typeRoots": ["node_modules", "src/types"],
+    "types": ["vite/client", "vitest/globals", "jest"],
+    "noImplicitAny": true,
+    "noImplicitReturns": false,
+    "noImplicitThis": false
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "build", "**/*.spec.ts", "**/*.test.ts", "src/test/**/*", "src/**/__tests__/**/*"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

@@ -1,0 +1,309 @@
+{
+  "expo": {
+    "name": "PyMastery",
+    "slug": "pymastery",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pymastery.app",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses camera for profile pictures and code scanning",
+        "NSLocationWhenInUseUsageDescription": "This app uses location for location-based learning features",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses location for location-based learning features",
+        "NSMicrophoneUsageDescription": "This app uses microphone for voice features",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library for profile pictures",
+        "UIStatusBarStyle": "UIStatusBarStyleLightContent",
+        "UISupportedInterfaceOrientations": [
+          "UIInterfaceOrientationPortrait",
+          "UIInterfaceOrientationLandscapeLeft",
+          "UIInterfaceOrientationLandscapeRight"
+        ],
+        "UIRequiresFullScreen": false,
+        "UIPrerenderedIcon": false,
+        "UIAppFonts": [
+          "Roboto-Regular.ttf",
+          "Roboto-Bold.ttf",
+          "Roboto-Medium.ttf"
+        ],
+        "CFBundleDisplayName": "PyMastery",
+        "CFBundleShortVersionString": "1.0.0",
+        "CFBundleVersion": "1.0.0",
+        "LSApplicationQueriesSchemes": [
+          "https",
+          "http"
+        ]
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "entitlements": {
+        "com.apple.developer.networking.wifi-info": true,
+        "com.apple.developer.networking.HotspotConfiguration": true
+      },
+      "associatedDomains": [
+        "applinks:pymastery.com"
+      ]
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.pymastery.app",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_NETWORK_STATE",
+        "ACCESS_WIFI_STATE",
+        "VIBRATE",
+        "WAKE_LOCK",
+        "FOREGROUND_SERVICE",
+        "INTERNET"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+        }
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": {
+            "scheme": "pymastery"
+          },
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "softwareKeyboardLayoutMode": "resize",
+      "splash": {
+        "image": "./assets/android-splash.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#ffffff"
+      },
+      "icon": "./assets/android-icon.png",
+      "jsEngine": "hermes"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single",
+      "config": {
+        "maxFileSize": 200000
+      },
+      "meta": {
+        "viewport": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
+        "description": "Learn Python programming with PyMastery - Interactive coding challenges, AI mentorship, and comprehensive learning platform",
+        "keywords": "python, programming, coding, learn, education, tutorial, development",
+        "author": "PyMastery Team",
+        "themeColor": "#007AFF",
+        "appleMobileWebAppCapable": "yes",
+        "appleMobileWebAppStatusBarStyle": "black-translucent",
+        "formatDetection": "telephone=no"
+      },
+      "manifest": {
+        "name": "PyMastery",
+        "short_name": "PyMastery",
+        "description": "Learn Python programming with PyMastery",
+        "start_url": "/",
+        "display": "standalone",
+        "background_color": "#ffffff",
+        "theme_color": "#007AFF",
+        "orientation": "portrait-primary",
+        "icons": [
+          {
+            "src": "./assets/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+          },
+          {
+            "src": "./assets/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+          }
+        ],
+        "categories": ["education", "productivity"],
+        "lang": "en-US"
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow PyMastery to access your camera for profile pictures and code scanning features.",
+          "recordAudioAndroid": false,
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationPermission": "Allow PyMastery to access your location for location-based learning features.",
+          "backgroundLocation": false
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#007AFF",
+          "sounds": [
+            "./assets/sounds/notification.wav"
+          ],
+          "defaultChannel": "default",
+          "iosDisplayInForeground": true,
+          "androidMode": "default",
+          "androidCollapsedTitle": "New notification"
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow PyMastery to use Face ID for secure authentication."
+        }
+      ],
+      [
+        "expo-haptics",
+        {
+          "enabled": true
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "accelerometer": true,
+          "gyroscope": true,
+          "magnetometer": true
+        }
+      ],
+      [
+        "expo-file-system",
+        {
+          "directory": "Documents"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow PyMastery to access your photos for profile pictures."
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "shouldFaceIdEnroll": false
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Roboto-Regular.ttf",
+            "./assets/fonts/Roboto-Bold.ttf",
+            "./assets/fonts/Roboto-Medium.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-status-bar",
+        {
+          "style": "light",
+          "translucent": true
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "PORTRAIT",
+          "userInterfaceStyle": "AUTOMATIC"
+        }
+      ]
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "input": "./dist",
+          "config": {
+            "organization": "pymastery",
+            "project": "mobile-app",
+            "authToken": "YOUR_SENTRY_AUTH_TOKEN"
+          }
+        }
+      ]
+    },
+    "experiments": {
+      "typedRoutes": true,
+      "turbo": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      },
+      "apiUrl": "https://api.pymastery.com",
+      "analytics": {
+        "enabled": true,
+        "provider": "firebase"
+      },
+      "features": {
+        "camera": true,
+        "location": true,
+        "notifications": true,
+        "biometrics": true,
+        "offline": true,
+        "ai": true
+      },
+      "build": {
+        "development": {
+          "channel": "development",
+          "distribution": "internal"
+        },
+        "staging": {
+          "channel": "staging",
+          "distribution": "internal"
+        },
+        "production": {
+          "channel": "production",
+          "distribution": "store"
+        }
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/your-update-url",
+      "fallbackToCacheTimeout": 0,
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "useClassicUpdates": false
+    },
+    "description": "Learn Python programming with PyMastery - Interactive coding challenges, AI mentorship, and comprehensive learning platform",
+    "githubUrl": "https://github.com/pymastery/mobile-app",
+    "privacy": "https://pymastery.com/privacy",
+    "primaryColor": "#007AFF",
+    "scheme": "pymastery",
+    "owner": "pymastery"
+  }
+}

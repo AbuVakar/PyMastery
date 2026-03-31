@@ -1,0 +1,125 @@
+{
+  "timestamp": "2026-03-30T01:56:26.629772+00:00",
+  "project_root": "C:\\Users\\bakra\\Desktop\\PyMastery",
+  "backend_url": "http://127.0.0.1:8000",
+  "environment": {
+    "python": "Python 3.13.12",
+    "backend_python": "Python 3.13.12",
+    "pytest_python": "Python 3.13.12",
+    "verification_python": "Python 3.13.12",
+    "node": "v24.4.0",
+    "npm": "11.4.2"
+  },
+  "summary": {
+    "total": 6,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 1,
+    "warning_count": 0,
+    "success_rate": 83.33
+  },
+  "suites": [
+    {
+      "name": "Backend Health Direct",
+      "category": "backend",
+      "status": "passed",
+      "command": [
+        "C:\\Users\\bakra\\Desktop\\PyMastery\\backend\\.venv\\Scripts\\python.exe",
+        "test_health_direct.py"
+      ],
+      "cwd": "C:\\Users\\bakra\\Desktop\\PyMastery\\backend",
+      "duration_seconds": 17.366681699999845,
+      "return_code": 0,
+      "error": null,
+      "stdout_tail": "Health Endpoint Optimization Verification\n============================================================\nDirect Health Endpoint Performance Test\n==================================================\n[OK] Successfully imported health_check function\n\nTesting 20 direct calls to health_check()\n--------------------------------------------------\nCall  1:  51.10ms - Status: healthy - Indicator: fast\nCall  2:   2.69ms - Status: healthy - Indicator: fast\nCall  3:   1.88ms - Status: healthy - Indicator: fast\nCall  4:   2.29ms - Status: healthy - Indicator: fast\nCall  5:   2.85ms - Status: healthy - Indicator: fast\nCall  6:   7.32ms - Status: healthy - Indicator: fast\nCall  7:   1.77ms - Status: healthy - Indicator: fast\nCall  8:   2.14ms - Status: healthy - Indicator: fast\nCall  9:   1.46ms - Status: healthy - Indicator: fast\nCall 10:   1.25ms - Status: healthy - Indicator: fast\nCall 11:   1.96ms - Status: healthy - Indicator: fast\nCall 12:   2.22ms - Status: healthy - Indicator: fast\nCall 13:   1.69ms - Status: healthy - Indicator: fast\nCall 14:   2.00ms - Status: healthy - Indicator: fast\nCall 15:   1.98ms - Status: healthy - Indicator: fast\nCall 16:   1.79ms - Status: healthy - Indicator: fast\nCall 17:   1.18ms - Status: healthy - Indicator: fast\nCall 18:   1.68ms - Status: healthy - Indicator: fast\nCall 19:   2.30ms - Status: healthy - Indicator: fast\nCall 20:   1.37ms - Status: healthy - Indicator: fast\n\n==================================================\nPERFORMANCE RESULTS\n==================================================\n[OK] Successful Calls: 20/20\n[FAIL] Failed Calls: 0/20\nAverage Response Time: 4.65ms\nFastest Response: 1.18ms\nSlowest Response: 51.10ms\nMedian Response Time: 1.97ms\nSlow Responses (>100ms): 0\nVery Slow Responses (>500ms): 0\n\nEXCELLENT Extremely fast - perfect for monitoring\n[OK] SUCCESS: No blocking delays detected\n[OK] The 1-second delay problem has been resolved\n\nTesting Detailed Health Endpoint\n--------------------------------------------------\nDetailed Call 1:  29.92ms - Status: healthy\nDetailed Call 2:  24.47ms - Status: healthy\nDetailed Call 3:  29.36ms - Status: healthy\n\nDetailed Endpoint - Average: 27.92ms\n[OK] Detailed endpoint is reasonably fast\n\n============================================================\nOPTIMIZATION VERIFICATION\n============================================================\n[OK] OPTIMIZATION SUCCESSFUL\n   - Health endpoint is now fast and responsive\n   - No blocking 1-second delays detected\n   - Suitable for monitoring and uptime checks\n   - Zero performance bottlenecks remain\n\nCHANGES MADE:\n   - Removed psutil.cpu_percent(interval=1) blocking call\n   - Changed to psutil.cpu_percent(interval=0) for non-blocking\n   - Added response_time_ms indicator\n   - Created separate /api/health/detailed endpoint\n   - Optimized error handling for fast responses",
+      "stderr_tail": "",
+      "warnings": []
+    },
+    {
+      "name": "Backend Auth Security",
+      "category": "backend",
+      "status": "passed",
+      "command": [
+        "C:\\Users\\bakra\\Desktop\\PyMastery\\backend\\.venv\\Scripts\\python.exe",
+        "test_auth_security.py"
+      ],
+      "cwd": "C:\\Users\\bakra\\Desktop\\PyMastery\\backend",
+      "duration_seconds": 4.0210385999998834,
+      "return_code": 0,
+      "error": null,
+      "stdout_tail": "[START] Starting authentication security hardening tests\n============================================================\n[SECURITY] Testing authentication security hardening\n==================================================\n\n1. Testing token blacklist service...\n   [OK] Token blacklisted: True\n   [OK] Token is blacklisted: True\n   [OK] User tokens blacklisted: True\n   [OK] User is blacklisted: True\n   [OK] Blacklist stats: {'redis_available': True, 'fallback_entries': 0, 'storage_type': 'redis', 'redis_entries': 5, 'redis_user_blacklists': 5}\n\n2. Testing auth rate limiter...\n   [OK] Login rate limit check: {'allowed': True, 'limit': 20, 'remaining': 18, 'reset_time': 1774836514, 'retry_after': 0}\n   [OK] Attempt recorded\n   [OK] Rate limiter stats: {'redis_available': True, 'storage_type': 'redis', 'limits_configured': ['login', 'register', 'reset', 'refresh', 'verify', 'change_password'], 'fallback_entries': 0, 'redis_entries': 1, 'action_stats': {'login': 1, 'register': 0, 'reset': 0, 'refresh': 0, 'verify': 0, 'change_password': 0}}\n\n3. Testing security logger...\n   [OK] Security event logged\n   [OK] Security stats: 608 events\n   [OK] Recent events: 5 events\n\n[OK] All security services are working correctly.\n\n[AUTH] Testing authentication endpoints\n==================================================\n\n1. Testing auth router import...\n   [OK] Auth router imported successfully\n   [OK] Route /register exists\n   [OK] Route /login exists\n   [OK] Route /refresh exists\n   [OK] Route /logout exists\n   [OK] Route /security/stats exists\n   [OK] Route /security/recent-events exists\n   [OK] Route /admin/blacklist-user/{user_id} exists\n   [OK] Route /admin/reset-rate-limit/{identifier} exists\n   [OK] Route /admin/cleanup-expired exists\n\n2. Testing auth dependencies...\n   [OK] Auth dependencies imported successfully\n\n[OK] All authentication components are working correctly.\n\n============================================================\n[RESULTS] Test results\n============================================================\n[OK] ALL TESTS PASSED\n\nSecurity hardening features validated:\n - Token blacklisting and invalidation\n - Rate limiting on auth endpoints\n - Security event logging\n - User blacklisting\n - Admin security management\n - Real-time security monitoring\n\nAuthentication stack is production-ready with enhanced security checks.",
+      "stderr_tail": "",
+      "warnings": []
+    },
+    {
+      "name": "Backend Pytest Verification",
+      "category": "backend",
+      "status": "passed",
+      "command": [
+        "C:\\Users\\bakra\\Desktop\\PyMastery\\backend\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/test_verification_suite.py",
+        "tests/test_gemini_service.py",
+        "-v",
+        "--tb=short",
+        "-W",
+        "ignore::DeprecationWarning"
+      ],
+      "cwd": "C:\\Users\\bakra\\Desktop\\PyMastery\\backend",
+      "duration_seconds": 44.136559000000034,
+      "return_code": 0,
+      "error": null,
+      "stdout_tail": "============================= test session starts =============================\nplatform win32 -- Python 3.13.12, pytest-9.0.2, pluggy-1.6.0 -- C:\\Users\\bakra\\Desktop\\PyMastery\\backend\\.venv\\Scripts\\python.exe\ncachedir: .pytest_cache\nrootdir: C:\\Users\\bakra\\Desktop\\PyMastery\\backend\nconfigfile: pytest.ini\nplugins: anyio-4.12.1, asyncio-1.3.0\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollecting ... collected 21 items\n\ntests/test_verification_suite.py::TestHealthAndAuth::test_health_check PASSED [  4%]\ntests/test_verification_suite.py::TestHealthAndAuth::test_registration_returns_tokens_and_user PASSED [  9%]\ntests/test_verification_suite.py::TestHealthAndAuth::test_duplicate_registration_rejected PASSED [ 14%]\ntests/test_verification_suite.py::TestHealthAndAuth::test_login_returns_otp_challenge PASSED [ 19%]\ntests/test_verification_suite.py::TestHealthAndAuth::test_get_current_user_with_valid_token PASSED [ 23%]\ntests/test_verification_suite.py::TestHealthAndAuth::test_get_current_user_without_token PASSED [ 28%]\ntests/test_verification_suite.py::TestHealthAndAuth::test_refresh_token_success PASSED [ 33%]\ntests/test_verification_suite.py::TestHealthAndAuth::test_logout_invalidates_token PASSED [ 38%]\ntests/test_verification_suite.py::TestHealthAndAuth::test_old_auth_path_returns_404 PASSED [ 42%]\ntests/test_verification_suite.py::TestProtectedRoutes::test_dashboard_stats PASSED [ 47%]\ntests/test_verification_suite.py::TestProtectedRoutes::test_dashboard_activity PASSED [ 52%]\ntests/test_verification_suite.py::TestProtectedRoutes::test_courses_and_problems PASSED [ 57%]\ntests/test_verification_suite.py::TestProtectedRoutes::test_user_profile_route PASSED [ 61%]\ntests/test_verification_suite.py::TestAITutorAndIntegrity::test_ai_tutor_chat PASSED [ 66%]\ntests/test_verification_suite.py::TestAITutorAndIntegrity::test_ai_tutor_requires_auth PASSED [ 71%]\ntests/test_verification_suite.py::TestAITutorAndIntegrity::test_cors_preflight_health PASSED [ 76%]\ntests/test_verification_suite.py::TestAITutorAndIntegrity::test_endpoint_availability PASSED [ 80%]\ntests/test_verification_suite.py::TestPerformance::test_health_endpoint_is_fast PASSED [ 85%]\ntests/test_gemini_service.py::test_generate_ai_response_uses_google_genai_client PASSED [ 90%]\ntests/test_gemini_service.py::test_generate_ai_response_reads_candidate_parts_when_text_missing PASSED [ 95%]\ntests/test_gemini_service.py::test_generate_ai_response_falls_back_when_sdk_call_fails PASSED [100%]\n\n============================= 21 passed in 38.62s =============================",
+      "stderr_tail": "",
+      "warnings": []
+    },
+    {
+      "name": "API Verification Suite",
+      "category": "integration",
+      "status": "skipped",
+      "command": [],
+      "cwd": "C:\\Users\\bakra\\Desktop\\PyMastery",
+      "duration_seconds": 0.0,
+      "return_code": null,
+      "error": "backend not reachable at http://127.0.0.1:8000; start the backend server to run integration checks",
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "warnings": []
+    },
+    {
+      "name": "Frontend Lint",
+      "category": "frontend",
+      "status": "passed",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "lint"
+      ],
+      "cwd": "C:\\Users\\bakra\\Desktop\\PyMastery\\frontend",
+      "duration_seconds": 61.017711599999984,
+      "return_code": 0,
+      "error": null,
+      "stdout_tail": "\n> pymastery-frontend@1.0.0 lint\n> eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+      "stderr_tail": "",
+      "warnings": []
+    },
+    {
+      "name": "Frontend Build",
+      "category": "frontend",
+      "status": "passed",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "build"
+      ],
+      "cwd": "C:\\Users\\bakra\\Desktop\\PyMastery\\frontend",
+      "duration_seconds": 61.817733899999894,
+      "return_code": 0,
+      "error": null,
+      "stdout_tail": "     \u001b[39m\u001b[1m\u001b[2m  0.20 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.17 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/target-ocCmBgrY.js               \u001b[39m\u001b[1m\u001b[2m  0.22 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.16 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/goal-Cn6qnMTS.js                 \u001b[39m\u001b[1m\u001b[2m  0.25 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.20 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/chart-column-D4csmPQP.js         \u001b[39m\u001b[1m\u001b[2m  0.25 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.19 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/calendar-BPJsEejk.js             \u001b[39m\u001b[1m\u001b[2m  0.25 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.20 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/shield-CrOf646E.js               \u001b[39m\u001b[1m\u001b[2m  0.27 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.22 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/award-CZ13H-8l.js                \u001b[39m\u001b[1m\u001b[2m  0.27 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.22 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/flame-DRLz5P1U.js                \u001b[39m\u001b[1m\u001b[2m  0.28 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.23 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/book-open-B6eK3kDz.js            \u001b[39m\u001b[1m\u001b[2m  0.28 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.20 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/users-DiQSdsLJ.js                \u001b[39m\u001b[1m\u001b[2m  0.30 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.22 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/clock-DRO4ivH7.js                \u001b[39m\u001b[1m\u001b[2m  0.32 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.25 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/shield-check-Cl3vouCQ.js         \u001b[39m\u001b[1m\u001b[2m  0.32 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.25 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/save-CH1Tsutr.js                 \u001b[39m\u001b[1m\u001b[2m  0.32 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.23 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/layers-9deiqa8L.js               \u001b[39m\u001b[1m\u001b[2m  0.42 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.24 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/trophy-7VnRQDTR.js               \u001b[39m\u001b[1m\u001b[2m  0.46 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.28 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/star-Cf1fgmNU.js                 \u001b[39m\u001b[1m\u001b[2m  0.47 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.29 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/phone-CizuVp5D.js                \u001b[39m\u001b[1m\u001b[2m  0.60 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.36 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/eye-ClaQtM9t.js                  \u001b[39m\u001b[1m\u001b[2m  0.63 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.34 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/AdminDashboard-GxQOddtL.js       \u001b[39m\u001b[1m\u001b[2m  0.98 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.57 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/SmartIDE-Bn1MsOzx.js             \u001b[39m\u001b[1m\u001b[2m  1.06 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.65 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/CommunityForum-DPVj92wW.js       \u001b[39m\u001b[1m\u001b[2m  1.12 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.68 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/CodePlayground-DZe4dBze.js       \u001b[39m\u001b[1m\u001b[2m  1.14 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.69 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/StudyGroups-Dm-Jg3Ud.js          \u001b[39m\u001b[1m\u001b[2m  1.20 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.69 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/CurriculumSystem-DeTt34kw.js     \u001b[39m\u001b[1m\u001b[2m  1.22 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.72 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/PlacementTracks-fzEbDos2.js      \u001b[39m\u001b[1m\u001b[2m  1.22 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.73 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/SharedCode-DkDl1wLT.js           \u001b[39m\u001b[1m\u001b[2m  1.51 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.80 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/ResourceLibrary-D7l6EMIf.js      \u001b[39m\u001b[1m\u001b[2m  1.52 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.84 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/AchievementsPage-DizG2eMK.js     \u001b[39m\u001b[1m\u001b[2m  1.97 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.91 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/ActivityPage-C7UIcfEv.js         \u001b[39m\u001b[1m\u001b[2m  2.10 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.98 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/DeadlinesPage-Cgw3aV5v.js        \u001b[39m\u001b[1m\u001b[2m  2.10 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.97 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/LegacyFeaturePage-8ElA7oBU.js    \u001b[39m\u001b[1m\u001b[2m  2.45 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   0.87 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/WorldClassLogin-BUEAKq7s.js      \u001b[39m\u001b[1m\u001b[2m  2.92 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   1.28 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/SolveFixed-DSYkznW_.js           \u001b[39m\u001b[1m\u001b[2m  3.61 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   1.42 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/ErrorStates-D7xpA1zc.js          \u001b[39m\u001b[1m\u001b[2m  3.96 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   1.45 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/WorldClassDashboard-hyYpFVtl.js  \u001b[39m\u001b[1m\u001b[2m  4.05 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   1.40 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/WorldClassProblems-DD6UMUIA.js   \u001b[39m\u001b[1m\u001b[2m  4.79 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   1.75 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/AIChatPage-DgnrDrTf.js           \u001b[39m\u001b[1m\u001b[2m  4.84 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   1.86 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/LoginPage-DtaQp2pv.js            \u001b[39m\u001b[1m\u001b[2m  5.47 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   2.15 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/ProfilePage-BFEg7Rmb.js          \u001b[39m\u001b[1m\u001b[2m  5.60 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   2.16 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/Settings-Dv1DLN5J.js             \u001b[39m\u001b[1m\u001b[2m  6.15 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   1.98 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/SignupPage-BLJXEmTC.js           \u001b[39m\u001b[1m\u001b[2m  6.45 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   2.08 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/DashboardPage-DvyRQIk_.js        \u001b[39m\u001b[1m\u001b[2m  7.22 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   2.26 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/ContactPage-Vx5WAT0L.js          \u001b[39m\u001b[1m\u001b[2m  7.85 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   2.46 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/QuizPage-C32G5OMz.js             \u001b[39m\u001b[1m\u001b[2m  9.33 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   2.44 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/CoursePage-CvTXexzG.js           \u001b[39m\u001b[1m\u001b[2m 12.44 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   3.15 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/PaymentIntegration-XkvSyr0e.js   \u001b[39m\u001b[1m\u001b[2m 13.98 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   3.71 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/learningContent-CbFds91_.js      \u001b[39m\u001b[1m\u001b[2m 20.66 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   7.10 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/HomePage-CVj2tKdv.js             \u001b[39m\u001b[1m\u001b[2m132.40 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:  42.59 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/index-D9vYyaUH.js                \u001b[39m\u001b[1m\u001b[2m333.66 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip: 108.38 kB\u001b[22m\n\u001b[32m\u2713 built in 29.65s\u001b[39m",
+      "stderr_tail": "",
+      "warnings": []
+    }
+  ]
+}

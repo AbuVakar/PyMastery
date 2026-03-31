@@ -1,0 +1,73 @@
+{
+  "expo": {
+    "name": "PyMastery",
+    "slug": "pymastery",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pymastery.app",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses camera for profile pictures and code scanning",
+        "NSLocationWhenInUseUsageDescription": "This app uses location for location-based learning features",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses location for location-based learning features",
+        "NSMicrophoneUsageDescription": "This app uses microphone for voice features",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library for profile pictures"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.pymastery.app",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow PyMastery to access your camera for profile pictures and code scanning features."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationPermission": "Allow PyMastery to access your location for location-based learning features."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#007AFF",
+          "sounds": [
+            "./assets/sounds/notification.wav"
+          ]
+        }
+      ]
+    ]
+  }
+}

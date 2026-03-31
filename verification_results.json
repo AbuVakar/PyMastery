@@ -1,0 +1,170 @@
+{
+  "timestamp": "2026-03-30T01:57:34.145697+00:00",
+  "backend_url": "http://127.0.0.1:8000",
+  "frontend_url_detected": "http://127.0.0.1:5173",
+  "summary": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0,
+    "skipped": 0,
+    "success_rate": 100.0
+  },
+  "results": [
+    {
+      "name": "Backend Health",
+      "category": "backend",
+      "status": "passed",
+      "duration_seconds": 0.060551999999916006,
+      "details": {
+        "status_code": 200,
+        "health_status": "healthy",
+        "version": "2.0.0"
+      },
+      "error": null
+    },
+    {
+      "name": "Auth Register",
+      "category": "auth",
+      "status": "passed",
+      "duration_seconds": 1.9989072999997006,
+      "details": {
+        "status_code": 200,
+        "registered_email": "verification_1774835846@example.com",
+        "user_id": "69c9d887558d962ce5a8e3c5"
+      },
+      "error": null
+    },
+    {
+      "name": "Auth Me",
+      "category": "auth",
+      "status": "passed",
+      "duration_seconds": 0.013904299999921932,
+      "details": {
+        "status_code": 200,
+        "email": "verification_1774835846@example.com",
+        "user_id": "69c9d887558d962ce5a8e3c5"
+      },
+      "error": null
+    },
+    {
+      "name": "Auth Refresh",
+      "category": "auth",
+      "status": "passed",
+      "duration_seconds": 0.25619830000005095,
+      "details": {
+        "status_code": 200,
+        "token_refreshed": true
+      },
+      "error": null
+    },
+    {
+      "name": "Auth Login OTP Challenge",
+      "category": "auth",
+      "status": "passed",
+      "duration_seconds": 1.7416072000000895,
+      "details": {
+        "status_code": 200,
+        "requires_otp": true,
+        "message": "OTP sent to your email"
+      },
+      "error": null
+    },
+    {
+      "name": "Dashboard Stats",
+      "category": "dashboard",
+      "status": "passed",
+      "duration_seconds": 0.021445600000333798,
+      "details": {
+        "status_code": 200,
+        "has_stats_key": false
+      },
+      "error": null
+    },
+    {
+      "name": "Dashboard Activity",
+      "category": "dashboard",
+      "status": "passed",
+      "duration_seconds": 0.019602500000019063,
+      "details": {
+        "status_code": 200,
+        "activity_count": 0
+      },
+      "error": null
+    },
+    {
+      "name": "AI Tutor Chat",
+      "category": "ai",
+      "status": "passed",
+      "duration_seconds": 2.4845476999998937,
+      "details": {
+        "status_code": 200,
+        "response_length": 29,
+        "emotional_tone": "educational"
+      },
+      "error": null
+    },
+    {
+      "name": "Courses List",
+      "category": "content",
+      "status": "passed",
+      "duration_seconds": 0.018707800000356656,
+      "details": {
+        "status_code": 200,
+        "course_count": 3
+      },
+      "error": null
+    },
+    {
+      "name": "Problems List",
+      "category": "content",
+      "status": "passed",
+      "duration_seconds": 0.017263700000057725,
+      "details": {
+        "status_code": 200,
+        "problem_count": 3
+      },
+      "error": null
+    },
+    {
+      "name": "User Profile Route",
+      "category": "users",
+      "status": "passed",
+      "duration_seconds": 0.022110299999894778,
+      "details": {
+        "status_code": 200,
+        "name": "Verification User",
+        "email": "verification_1774835846@example.com"
+      },
+      "error": null
+    },
+    {
+      "name": "Auth Route Integrity",
+      "category": "routing",
+      "status": "passed",
+      "duration_seconds": 0.024923699999817472,
+      "details": {
+        "new_route_status": 422,
+        "old_route_status": 404
+      },
+      "error": null
+    },
+    {
+      "name": "Frontend Routes and Encoding",
+      "category": "frontend",
+      "status": "passed",
+      "duration_seconds": 1.4139077999998335,
+      "details": {
+        "frontend_url": "http://127.0.0.1:5173",
+        "routes_checked": [
+          "/",
+          "/login",
+          "/dashboard",
+          "/courses",
+          "/problems"
+        ],
+        "encoding_artifacts": 0
+      },
+      "error": null
+    }
+  ]
+}

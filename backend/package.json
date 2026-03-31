@@ -1,0 +1,50 @@
+{
+  "name": "pymastery-backend",
+  "version": "1.0.0",
+  "description": "PyMastery Backend API - Python FastAPI Implementation",
+  "main": "main.py",
+  "scripts": {
+    "start": "python start.py",
+    "start:dev": "uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "start:prod": "python start.py",
+    "dev": "npm run start:dev",
+    "test": "pytest",
+    "test:watch": "pytest --watch",
+    "test:coverage": "pytest --cov=.",
+    "lint": "flake8 . --max-line-length=88",
+    "lint:fix": "autopep8 --in-place .",
+    "format": "black .",
+    "type-check": "mypy .",
+    "health": "curl -f http://localhost:8000/api/health || exit 1"
+  },
+  "dependencies": {
+    "fastapi": "^0.115.6",
+    "uvicorn": "^0.32.1",
+    "python-dotenv": "^1.0.1",
+    "motor": "^3.5.1",
+    "pymongo": "^4.8.0",
+    "pydantic": "^2.8.2",
+    "python-jose": "^3.3.0",
+    "passlib": "^1.7.4",
+    "python-multipart": "^0.0.9",
+    "redis": "^4.5.0",
+    "aioredis": "^2.0.1",
+    "httpx": "^0.27.2",
+    "openai": "^1.3.8",
+    "judge0": "^1.3.0",
+    "prometheus-client": "^0.19.0",
+    "psutil": "^5.9.6"
+  },
+  "devDependencies": {
+    "pytest": "^7.4.0",
+    "pytest-asyncio": "^0.21.0",
+    "pytest-cov": "^4.1.0",
+    "black": "^23.7.0",
+    "flake8": "^6.0.0",
+    "mypy": "^1.5.0",
+    "autopep8": "^2.0.4"
+  },
+  "engines": {
+    "python": ">=3.9"
+  }
+}

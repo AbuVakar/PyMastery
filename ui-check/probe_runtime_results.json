@@ -1,0 +1,550 @@
+{
+  "runs": [
+    {
+      "url": "http://127.0.0.1:5173/",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "metrics": {
+        "path": "/",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "scrollHeight": 720,
+        "bodyScrollHeight": 3985,
+        "mainChildCount": 1,
+        "mainChildren": [
+          {
+            "tag": "div",
+            "className": "w-full bg-gray-50 dark:bg-slate-900",
+            "rect": {
+              "top": 64,
+              "left": 0,
+              "width": 1280,
+              "height": 3440
+            },
+            "childCount": 6
+          }
+        ],
+        "sectionCount": 6,
+        "sections": [
+          {
+            "className": "relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 text-white",
+            "rect": {
+              "top": 64,
+              "left": 0,
+              "width": 1280,
+              "height": 536
+            },
+            "textSample": "Master Programming withAI-Powered LearningJoin 15,420+ students learning to code with a more focused, guided platform.St",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)"
+            },
+            "headingStyle": {
+              "text": "Master Programming withAI-Powered Learning",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "color": "rgb(255, 255, 255)"
+            }
+          },
+          {
+            "className": "bg-white py-16 dark:bg-slate-800",
+            "rect": {
+              "top": 600,
+              "left": 0,
+              "width": 1280,
+              "height": 304
+            },
+            "textSample": "15,420+Active Students52,347+Completed Courses247+Expert Instructors94%Success Rate",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "color": "rgb(15, 23, 42)"
+            },
+            "headingStyle": null
+          },
+          {
+            "className": "bg-gray-50 py-16 dark:bg-slate-900",
+            "rect": {
+              "top": 904,
+              "left": 0,
+              "width": 1280,
+              "height": 664
+            },
+            "textSample": "Why Choose PyMastery?Everything you need to become a stronger developer.Interactive CodingPractice in guided environment",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgb(248, 250, 252)",
+              "color": "rgb(15, 23, 42)"
+            },
+            "headingStyle": {
+              "text": "Why Choose PyMastery?",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "color": "rgb(15, 23, 42)"
+            }
+          },
+          {
+            "className": "bg-white py-16 dark:bg-slate-800",
+            "rect": {
+              "top": 1568,
+              "left": 0,
+              "width": 1280,
+              "height": 1080
+            },
+            "textSample": "Popular CoursesStart your learning journey with our most popular tracks.Python for BeginnersStart your programming journ",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "color": "rgb(15, 23, 42)"
+            },
+            "headingStyle": {
+              "text": "Popular Courses",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "color": "rgb(15, 23, 42)"
+            }
+          },
+          {
+            "className": "bg-gray-50 py-16 dark:bg-slate-900",
+            "rect": {
+              "top": 2648,
+              "left": 0,
+              "width": 1280,
+              "height": 496
+            },
+            "textSample": "What Our Students SayReal stories from real learners.Sarah JohnsonSoftware Developer\"PyMastery helped me transition from",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgb(248, 250, 252)",
+              "color": "rgb(15, 23, 42)"
+            },
+            "headingStyle": {
+              "text": "What Our Students Say",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "color": "rgb(15, 23, 42)"
+            }
+          },
+          {
+            "className": "bg-gradient-to-r from-blue-600 to-blue-700 py-16 text-white",
+            "rect": {
+              "top": 3144,
+              "left": 0,
+              "width": 1280,
+              "height": 360
+            },
+            "textSample": "Ready to Start Your Coding Journey?Join thousands of students who have already transformed their careers.Get Started Fre",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)"
+            },
+            "headingStyle": {
+              "text": "Ready to Start Your Coding Journey?",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "color": "rgb(255, 255, 255)"
+            }
+          }
+        ],
+        "navRect": {
+          "top": 0,
+          "left": 0,
+          "width": 1280,
+          "height": 64
+        },
+        "footerRect": {
+          "top": 3504,
+          "left": 0,
+          "width": 1280,
+          "height": 481
+        },
+        "containsVisibleWhyHeading": true
+      },
+      "pageErrors": [],
+      "consoleMessages": [
+        {
+          "type": "debug",
+          "text": "[vite] connecting..."
+        },
+        {
+          "type": "debug",
+          "text": "[vite] connected."
+        },
+        {
+          "type": "info",
+          "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"
+        },
+        {
+          "type": "error",
+          "text": "Error: <path> attribute d: Expected number, \"… 1.102.823 2.222v3.293c0 .319.19…\"."
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:5173/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "path": "/",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollHeight": 844,
+        "bodyScrollHeight": 6051,
+        "mainChildCount": 1,
+        "mainChildren": [
+          {
+            "tag": "div",
+            "className": "w-full bg-gray-50 dark:bg-slate-900",
+            "rect": {
+              "top": 64,
+              "left": 0,
+              "width": 390,
+              "height": 5401.5
+            },
+            "childCount": 6
+          }
+        ],
+        "sectionCount": 6,
+        "sections": [
+          {
+            "className": "relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 text-white",
+            "rect": {
+              "top": 64,
+              "left": 0,
+              "width": 390,
+              "height": 669.5
+            },
+            "textSample": "Master Programming withAI-Powered LearningJoin 15,420+ students learning to code with a more focused, guided platform.St",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)"
+            },
+            "headingStyle": {
+              "text": "Master Programming withAI-Powered Learning",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "color": "rgb(255, 255, 255)"
+            }
+          },
+          {
+            "className": "bg-white py-16 dark:bg-slate-800",
+            "rect": {
+              "top": 733.5,
+              "left": 0,
+              "width": 390,
+              "height": 448
+            },
+            "textSample": "15,420+Active Students52,347+Completed Courses247+Expert Instructors94%Success Rate",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "color": "rgb(15, 23, 42)"
+            },
+            "headingStyle": null
+          },
+          {
+            "className": "bg-gray-50 py-16 dark:bg-slate-900",
+            "rect": {
+              "top": 1181.5,
+              "left": 0,
+              "width": 390,
+              "height": 1088
+            },
+            "textSample": "Why Choose PyMastery?Everything you need to become a stronger developer.Interactive CodingPractice in guided environment",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgb(248, 250, 252)",
+              "color": "rgb(15, 23, 42)"
+            },
+            "headingStyle": {
+              "text": "Why Choose PyMastery?",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "color": "rgb(15, 23, 42)"
+            }
+          },
+          {
+            "className": "bg-white py-16 dark:bg-slate-800",
+            "rect": {
+              "top": 2269.5,
+              "left": 0,
+              "width": 390,
+              "height": 1884
+            },
+            "textSample": "Popular CoursesStart your learning journey with our most popular tracks.Python for BeginnersStart your programming journ",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "color": "rgb(15, 23, 42)"
+            },
+            "headingStyle": {
+              "text": "Popular Courses",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "color": "rgb(15, 23, 42)"
+            }
+          },
+          {
+            "className": "bg-gray-50 py-16 dark:bg-slate-900",
+            "rect": {
+              "top": 4153.5,
+              "left": 0,
+              "width": 390,
+              "height": 936
+            },
+            "textSample": "What Our Students SayReal stories from real learners.Sarah JohnsonSoftware Developer\"PyMastery helped me transition from",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgb(248, 250, 252)",
+              "color": "rgb(15, 23, 42)"
+            },
+            "headingStyle": {
+              "text": "What Our Students Say",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "color": "rgb(15, 23, 42)"
+            }
+          },
+          {
+            "className": "bg-gradient-to-r from-blue-600 to-blue-700 py-16 text-white",
+            "rect": {
+              "top": 5089.5,
+              "left": 0,
+              "width": 390,
+              "height": 376
+            },
+            "textSample": "Ready to Start Your Coding Journey?Join thousands of students who have already transformed their careers.Get Started Fre",
+            "computed": {
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)"
+            },
+            "headingStyle": {
+              "text": "Ready to Start Your Coding Journey?",
+              "display": "block",
+              "visibility": "visible",
+              "opacity": "1",
+              "color": "rgb(255, 255, 255)"
+            }
+          }
+        ],
+        "navRect": {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0
+        },
+        "footerRect": {
+          "top": 5465.5,
+          "left": 0,
+          "width": 390,
+          "height": 585
+        },
+        "containsVisibleWhyHeading": true
+      },
+      "pageErrors": [],
+      "consoleMessages": [
+        {
+          "type": "debug",
+          "text": "[vite] connecting..."
+        },
+        {
+          "type": "debug",
+          "text": "[vite] connected."
+        },
+        {
+          "type": "info",
+          "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"
+        },
+        {
+          "type": "error",
+          "text": "Error: <path> attribute d: Expected number, \"… 1.102.823 2.222v3.293c0 .319.19…\"."
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:5173/login",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "metrics": {
+        "path": "/login",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "scrollHeight": 720,
+        "bodyScrollHeight": 1232,
+        "mainChildCount": 1,
+        "mainChildren": [
+          {
+            "tag": "div",
+            "className": "px-4 py-10 sm:px-6 lg:px-8",
+            "rect": {
+              "top": 64,
+              "left": 0,
+              "width": 1280,
+              "height": 687
+            },
+            "childCount": 1
+          }
+        ],
+        "sectionCount": 0,
+        "sections": [],
+        "navRect": {
+          "top": 0,
+          "left": 0,
+          "width": 1280,
+          "height": 64
+        },
+        "footerRect": {
+          "top": 751,
+          "left": 0,
+          "width": 1280,
+          "height": 481
+        },
+        "containsVisibleWhyHeading": false
+      },
+      "pageErrors": [],
+      "consoleMessages": [
+        {
+          "type": "debug",
+          "text": "[vite] connecting..."
+        },
+        {
+          "type": "debug",
+          "text": "[vite] connected."
+        },
+        {
+          "type": "info",
+          "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"
+        },
+        {
+          "type": "error",
+          "text": "Error: <path> attribute d: Expected number, \"… 1.102.823 2.222v3.293c0 .319.19…\"."
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:5173/login",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "path": "/login",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollHeight": 844,
+        "bodyScrollHeight": 1360,
+        "mainChildCount": 1,
+        "mainChildren": [
+          {
+            "tag": "div",
+            "className": "px-4 py-10 sm:px-6 lg:px-8",
+            "rect": {
+              "top": 64,
+              "left": 0,
+              "width": 390,
+              "height": 711
+            },
+            "childCount": 1
+          }
+        ],
+        "sectionCount": 0,
+        "sections": [],
+        "navRect": {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0
+        },
+        "footerRect": {
+          "top": 775,
+          "left": 0,
+          "width": 390,
+          "height": 585
+        },
+        "containsVisibleWhyHeading": false
+      },
+      "pageErrors": [],
+      "consoleMessages": [
+        {
+          "type": "debug",
+          "text": "[vite] connecting..."
+        },
+        {
+          "type": "debug",
+          "text": "[vite] connected."
+        },
+        {
+          "type": "info",
+          "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"
+        },
+        {
+          "type": "error",
+          "text": "Error: <path> attribute d: Expected number, \"… 1.102.823 2.222v3.293c0 .319.19…\"."
+        }
+      ]
+    }
+  ],
+  "navigationChecks": [
+    {
+      "context": "desktop",
+      "loginLinkWorks": false,
+      "returnedHomePath": "http://127.0.0.1:5173/"
+    },
+    {
+      "context": "mobile",
+      "loginLinkWorks": false,
+      "returnedHomePath": "http://127.0.0.1:5173/"
+    }
+  ]
+}

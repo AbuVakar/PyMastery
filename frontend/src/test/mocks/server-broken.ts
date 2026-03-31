@@ -1,0 +1,180 @@
+import { http } from 'msw'
+
+export const handlers = [
+  // Auth endpoints
+  http.post('/api/v1/auth/login', ({ response, context }) => {
+    return response(
+      context.status(200),
+      context.json({
+        access_token: 'mock-token',
+        token_type: 'bearer',
+        user: {
+          id: '1',
+          email: 'user@example.com',
+          name: 'Test User',
+        },
+      })
+    )
+  }),
+
+  http.post('/api/v1/auth/register', ({ response, context }) => {
+    return response(
+      context.status(201),
+      context.json({
+        message: 'User created successfully',
+        user: {
+          id: '1',
+          email: 'user@example.com',
+          name: 'Test User',
+        },
+      })
+    )
+  }),
+
+  // User endpoints
+  http.get('/api/v1/users/me', ({ response, context }) => {
+    return response(
+      context.status(200),
+      context.json({
+        id: '1',
+        email: 'user@example.com',
+        name: 'Test User',
+        role: 'user',
+        created_at: '2024-01-01T00:00:00Z',
+      })
+    )
+  }),
+
+  // Course endpoints
+  http.get('/api/v1/courses', ({ response, context }) => {
+    return response(
+      context.status(200),
+      context.json({
+        courses: [
+          {
+            id: '1',
+            title: 'Python Basics',
+            description: 'Learn Python from scratch',
+            difficulty: 'beginner',
+            duration: '4 weeks',
+            lessons: 20,
+          },
+          {
+            id: '2',
+            title: 'Advanced Python',
+            description: 'Master advanced Python concepts',
+            difficulty: 'advanced',
+            duration: '6 weeks',
+            lessons: 30,
+          },
+        ],
+      })
+    )
+  }),
+
+  // Problem endpoints
+  http.get('/api/v1/problems', ({ response, context }) => {
+    return response(
+      context.status(200),
+      context.json({
+        problems: [
+          {
+            id: '1',
+            title: 'Hello World',
+            description: 'Print Hello World to console',
+            difficulty: 'easy',
+            language: 'python',
+            points: 10,
+          },
+          {
+            id: '2',
+            title: 'Sum of Two Numbers',
+            description: 'Calculate sum of two numbers',
+            difficulty: 'easy',
+            language: 'python',
+            points: 15,
+          },
+        ],
+      })
+    )
+  }),
+
+  // Progress endpoints
+  http.get('/api/v1/progress', ({ response, context }) => {
+    return response(
+      context.status(200),
+      context.json({
+        user_id: '1',
+        courses_completed: 2,
+        problems_solved: 15,
+        total_points: 150,
+        streak: 5,
+        rank: 'intermediate',
+      })
+    )
+  }),
+
+  // AI endpoints
+  http.post('/api/v1/advanced/ai/analyze-code', ({ response, context }) => {
+    return response(
+      context.status(200),
+      context.json({
+        success: true,
+        analysis: {
+          quality: 'good',
+          patterns: ['clean code', 'proper indentation'],
+          architecture: 'well-structured',
+        },
+        suggestions: ['Consider adding error handling', 'Add comments for clarity'],
+        score: 85.5,
+        complexity: 'moderate',
+        issues: [],
+        execution_time: 0.5,
+      })
+    )
+  }),
+
+  http.post('/api/v1/advanced/ai/mentor', ({ response, context }) => {
+    return response(
+      context.status(200),
+      context.json({
+        answer: 'To write a for loop in Python, you can use the following syntax: for item in iterable: print(item)',
+        hints: ['Use range() for numeric loops', 'Remember to indent the loop body'],
+        code_example: 'for i in range(5):\n    print(i)',
+        difficulty: 'beginner',
+        related_topics: ['loops', 'iteration', 'range function'],
+      })
+    )
+  }),
+
+  // Certificate endpoints
+  http.post('/api/v1/advanced/certificates/issue', ({ response, context }) => {
+    return response(
+      context.status(200),
+      context.json({
+        certificate_id: 'cert-123',
+        user_id: '1',
+        user_name: 'Test User',
+        course_name: 'Python Basics',
+        template_type: 'course_completion',
+        issued_at: '2024-01-01T00:00:00Z',
+        signature: 'mock-signature',
+        qr_code: 'mock-qr-code',
+        pdf_data: 'mock-pdf-data',
+        status: 'issued',
+      })
+    )
+  }),
+
+  // Health check
+  http.get('/health', ({ response, context }) => {
+    return response(
+      context.status(200),
+      context.json({
+        status: 'ok',
+        service: 'pymastery-api',
+        timestamp: new Date().toISOString(),
+      })
+    )
+  }),
+]

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+@layer components {
+  /* Enhanced glass morphism effect */
+  .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+
+  /* Enhanced gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  /* Enhanced buttons */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-primary-dark text-white font-semibold px-6 py-3 rounded-xl;
+    @apply hover:shadow-lg hover:shadow-primary/25 hover:scale-105;
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .btn-secondary {
+    @apply glass text-slate-100 font-semibold px-6 py-3 rounded-xl;
+    @apply hover:bg-white/10 hover:scale-105;
+    @apply transition-all duration-200 ease-out;
+  }
+
+  /* Enhanced cards */
+  .card {
+    @apply glass rounded-2xl p-6;
+  }
+
+  /* Enhanced inputs */
+  .input-field {
+    @apply bg-slate-800/50 border-slate-700 rounded-xl px-4 py-3 text-slate-100;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary;
+    @apply transition-all duration-200;
+  }
+
+  /* Enhanced animations */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  .pulse-glow {
+    animation: pulseGlow 2s infinite;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.5); }
+  }
+
+  /* Enhanced spacing utilities */
+  .text-shadow-glow {
+    text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+  }
+
+  /* Enhanced hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  /* Enhanced scrollbar */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-600) var(--gray-800);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: var(--gray-800);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--gray-600);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-500);
+  }
+}

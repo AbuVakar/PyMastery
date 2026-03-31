@@ -1,0 +1,24 @@
+{
+  "total_requests": 60,
+  "average_response_time": 122.38610585530598,
+  "slowest_endpoint": "POST /api/auth/login",
+  "fastest_endpoint": "GET /api/users/profile",
+  "memory_leaks_detected": false,
+  "cpu_intensive_operations": [
+    "GET /api/health: Avg CPU 19.08%, Max 80.00%",
+    "GET /api/courses: Avg CPU 28.86%, Max 88.90%",
+    "GET /api/problems: Avg CPU 11.23%, Max 62.50%",
+    "POST /api/auth/login: Avg CPU 49.18%, Max 79.10%",
+    "GET /api/users/profile: Avg CPU 32.53%, Max 72.70%"
+  ],
+  "database_query_issues": [],
+  "recommendations": [
+    "\ud83d\udcbb CPU intensive operations detected - Consider async processing",
+    "\ud83d\udcc8 Implement response caching for frequently accessed data",
+    "\ud83d\uddc4\ufe0f Add database indexes for slow queries",
+    "\ud83d\udd04 Use connection pooling for database connections",
+    "\ud83d\udce6 Compress large API responses",
+    "\u26a1 Implement lazy loading for large datasets",
+    "\ud83c\udfaf Add debouncing for frequent API calls"
+  ]
+}
