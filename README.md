@@ -3,11 +3,11 @@
   <p><strong>Full-stack programming learning platform for structured learning, hands-on coding practice, AI guidance, and progress tracking.</strong></p>
   <p>Learn concepts, solve problems, enroll in courses, track growth, and get guided support in one product.</p>
   <p>
-    <a href="#-overview">Overview</a> •
-    <a href="#-feature-status">Feature Status</a> •
-    <a href="#-system-architecture">Architecture</a> •
-    <a href="#-data-flow-diagram">Data Flow</a> •
-    <a href="#-local-setup">Setup</a> •
+    <a href="#-overview">Overview</a> |
+    <a href="#-feature-status">Feature Status</a> |
+    <a href="#-system-architecture">Architecture</a> |
+    <a href="#-data-flow-diagram">Data Flow</a> |
+    <a href="#-local-setup">Setup</a> |
     <a href="#-testing--verification">Testing</a>
   </p>
   <p>
@@ -87,46 +87,96 @@ The repository is currently in a strong **demo-ready** state.
 ## 🧩 System Architecture
 
 ```mermaid
-flowchart LR
-    A["React + TypeScript Frontend"] --> B["FastAPI Backend"]
-    B --> C["MongoDB"]
-    B --> D["Gemini AI"]
-    B --> E["Judge0"]
-    B --> F["SMTP / Email Service"]
-    B --> G["Google OAuth"]
+graph LR
+    FE[Frontend]
+    API[FastAPI Backend]
+    DB[(MongoDB)]
+    AI[Gemini AI]
+    J0[Judge0]
+    SMTP[SMTP Service]
+    GO[Google OAuth]
+
+    FE --> API
+    API --> DB
+    API --> AI
+    API --> J0
+    API --> SMTP
+    API --> GO
 ```
 
 ## 🔄 Data Flow Diagram
 
 ```mermaid
-flowchart TD
-    U["User"] --> UI["Frontend UI"]
-    UI --> AP["AuthProvider / API Client"]
-    AP --> API["FastAPI Routes"]
-    API --> SVC["Service Layer"]
-    SVC --> DB["MongoDB"]
-    SVC --> AI["Gemini / Demo AI"]
-    SVC --> EX["Judge0"]
-    SVC --> MAIL["SMTP"]
-    DB --> API
-    AI --> API
-    EX --> API
-    MAIL --> API
-    API --> UI
-    UI --> U
+graph TD
+    USER[User]
+    UI[Frontend UI]
+    CLIENT[Auth and API Client]
+    ROUTES[FastAPI Routes]
+    SERVICES[Service Layer]
+    DB[(MongoDB)]
+    AI[Gemini or Demo AI]
+    EXEC[Judge0]
+    MAIL[SMTP]
+
+    USER --> UI
+    UI --> CLIENT
+    CLIENT --> ROUTES
+    ROUTES --> SERVICES
+    SERVICES --> DB
+    SERVICES --> AI
+    SERVICES --> EXEC
+    SERVICES --> MAIL
+    ROUTES --> UI
 ```
 
 ## 🔐 Authentication Flow
 
 ```mermaid
-flowchart LR
-    A["User Login / Signup"] --> B["FastAPI Auth Route"]
-    B --> C["JWT Access + Refresh Tokens"]
-    C --> D["Frontend Storage"]
-    D --> E["Protected Routes"]
-    E --> F["Authenticated API Requests"]
-    F --> G["Token Refresh When Needed"]
+graph LR
+    U[User]
+    LOGIN[Login or Signup]
+    AUTH[Auth Route]
+    TOKEN[JWT Tokens]
+    STORE[Frontend Session State]
+    PROTECTED[Protected Routes]
+    APIREQ[Authenticated API Requests]
+    REFRESH[Token Refresh]
+
+    U --> LOGIN
+    LOGIN --> AUTH
+    AUTH --> TOKEN
+    TOKEN --> STORE
+    STORE --> PROTECTED
+    PROTECTED --> APIREQ
+    APIREQ --> REFRESH
 ```
+
+<details>
+  <summary><strong>Plain-text diagram fallback</strong></summary>
+
+```text
+System Architecture
+Frontend -> FastAPI Backend
+Backend -> MongoDB
+Backend -> Gemini AI
+Backend -> Judge0
+Backend -> SMTP Service
+Backend -> Google OAuth
+
+Data Flow
+User -> Frontend UI -> Auth/API Client -> FastAPI Routes -> Service Layer
+Service Layer -> MongoDB
+Service Layer -> Gemini or Demo AI
+Service Layer -> Judge0
+Service Layer -> SMTP
+FastAPI Routes -> Frontend UI
+
+Authentication Flow
+User -> Login or Signup -> Auth Route -> JWT Tokens -> Frontend Session State
+Frontend Session State -> Protected Routes -> Authenticated API Requests -> Token Refresh
+```
+
+</details>
 
 ## 📄 Resume-Ready Highlights
 
