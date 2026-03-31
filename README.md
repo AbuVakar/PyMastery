@@ -2,6 +2,13 @@
 
 PyMastery is a full-stack programming learning platform built to help students move from learning concepts to solving problems, tracking progress, and getting guided support in one product.
 
+![Status](https://img.shields.io/badge/Status-Demo%20Ready-2563eb?style=for-the-badge)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Python-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Last Commit](https://img.shields.io/github/last-commit/AbuVakar/PyMastery?style=for-the-badge)
+
 ## Overview
 
 PyMastery's main USP is its unified learning workflow. Instead of acting like a static course website, it combines:
@@ -44,14 +51,23 @@ The repository is in a strong demo and portfolio state.
 
 ```text
 PyMastery/
-├── backend/        FastAPI backend, auth, APIs, services, database access
-├── frontend/       React frontend, routes, components, pages, tests
-├── mobile-app/     Separate mobile app workspace
-├── docs/           Project documentation and reports
-├── config/         Environment and deployment configuration
-├── judge0/         Judge0-related configuration
-└── scripts/        Utility and verification scripts
++-- backend/        FastAPI backend, auth, APIs, services, database access
++-- frontend/       React frontend, routes, components, pages, tests
++-- mobile-app/     Separate mobile app workspace
++-- docs/           Project documentation and reports
++-- config/         Environment and deployment configuration
++-- judge0/         Judge0-related configuration
+\-- scripts/        Utility and verification scripts
 ```
+
+## Screenshots
+
+Current UI snapshots from the repository:
+
+| Home | Dashboard |
+| --- | --- |
+| ![Home Page](./ui-check/home_desktop.png) | ![Dashboard](./ui-check/dashboard_desktop.png) |
+| ![Home Mobile](./ui-check/home_mobile.png) | ![Dashboard Mobile](./ui-check/dashboard_mobile.png) |
 
 ## Local Setup
 
@@ -60,7 +76,7 @@ PyMastery/
 ```bash
 cd backend
 python -m venv .venv
-.venv\Scripts\activate
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
