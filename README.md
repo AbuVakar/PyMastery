@@ -1,13 +1,17 @@
-# PyMastery
+<div align="center">
+  <h1>PyMastery</h1>
+  <p><strong>Full-stack programming learning platform focused on structured learning, hands-on coding practice, AI guidance, and progress tracking.</strong></p>
+  <p>
+    <img src="https://img.shields.io/badge/Status-Demo%20Ready-2563eb?style=for-the-badge" alt="Status Demo Ready" />
+    <img src="https://img.shields.io/badge/Frontend-React%2019-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
+    <img src="https://img.shields.io/badge/Language-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+    <img src="https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+    <img src="https://img.shields.io/github/last-commit/AbuVakar/PyMastery?style=for-the-badge" alt="Last Commit" />
+  </p>
+</div>
 
-PyMastery is a full-stack programming learning platform built to help students move from learning concepts to solving problems, tracking progress, and getting guided support in one product.
-
-![Status](https://img.shields.io/badge/Status-Demo%20Ready-2563eb?style=for-the-badge)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-Python-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Last Commit](https://img.shields.io/github/last-commit/AbuVakar/PyMastery?style=for-the-badge)
+PyMastery helps students move from learning concepts to solving problems, tracking progress, and getting guided support in one product.
 
 ## Overview
 
@@ -47,27 +51,51 @@ The repository is in a strong demo and portfolio state.
 - Testing: Vitest, Playwright, Pytest
 - Optional integrations: Google OAuth, Gemini, Judge0, SMTP
 
+## Portfolio Highlights
+
+| Area | Highlight |
+| --- | --- |
+| Learning Flow | Structured courses, problem-solving, and dashboard-based progress in one app |
+| Product Focus | Designed as a complete coding learning workflow, not just a static content site |
+| AI Layer | Uses live Gemini when available and clearly falls back to `Demo Mode AI` when it is not |
+| Reliability | Protected routes, enrollment flow, contact flow, and verified frontend/backend test setup |
+
 ## Project Structure
 
 ```text
 PyMastery/
-+-- backend/        FastAPI backend, auth, APIs, services, database access
-+-- frontend/       React frontend, routes, components, pages, tests
-+-- mobile-app/     Separate mobile app workspace
-+-- docs/           Project documentation and reports
-+-- config/         Environment and deployment configuration
-+-- judge0/         Judge0-related configuration
+|-- backend/        FastAPI backend, auth, APIs, services, database access
+|-- frontend/       React frontend, routes, components, pages, tests
+|-- mobile-app/     Separate mobile app workspace
+|-- docs/           Project documentation and reports
+|-- config/         Environment and deployment configuration
+|-- judge0/         Judge0-related configuration
 \-- scripts/        Utility and verification scripts
 ```
 
 ## Screenshots
 
-Current UI snapshots from the repository:
+Current UI snapshots from the repository.
+
+### Desktop
 
 | Home | Dashboard |
 | --- | --- |
 | ![Home Page](./ui-check/home_desktop.png) | ![Dashboard](./ui-check/dashboard_desktop.png) |
+
+| Login | Home Full View |
+| --- | --- |
+| ![Login Desktop](./ui-check/login_desktop_full_v2.png) | ![Home Desktop Full](./ui-check/home_desktop_full_v2.png) |
+
+### Mobile
+
+| Home Mobile | Dashboard Mobile |
+| --- | --- |
 | ![Home Mobile](./ui-check/home_mobile.png) | ![Dashboard Mobile](./ui-check/dashboard_mobile.png) |
+
+| Login Mobile | Home Mobile Full View |
+| --- | --- |
+| ![Login Mobile](./ui-check/login_mobile_full_v2.png) | ![Home Mobile Full](./ui-check/home_mobile_full_v2.png) |
 
 ## Local Setup
 
