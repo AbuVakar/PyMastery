@@ -1,6 +1,7 @@
 <div align="center">
-  <h1>PyMastery</h1>
+  <h1>🚀 PyMastery</h1>
   <p><strong>Full-stack programming learning platform focused on structured learning, hands-on coding practice, AI guidance, and progress tracking.</strong></p>
+  <p>Learn concepts, solve problems, track progress, and get guided support in one product.</p>
   <p>
     <img src="https://img.shields.io/badge/Status-Demo%20Ready-2563eb?style=for-the-badge" alt="Status Demo Ready" />
     <img src="https://img.shields.io/badge/Frontend-React%2019-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
@@ -11,9 +12,9 @@
   </p>
 </div>
 
-PyMastery helps students move from learning concepts to solving problems, tracking progress, and getting guided support in one product.
+> PyMastery is designed as a complete coding learning workflow, not just a static course website.
 
-## Overview
+## 📌 Overview
 
 PyMastery's main USP is its unified learning workflow. Instead of acting like a static course website, it combines:
 
@@ -23,7 +24,13 @@ PyMastery's main USP is its unified learning workflow. Instead of acting like a 
 - user authentication and protected progress flows
 - responsive dashboard-driven learning experience
 
-## Current Status
+## ✨ Why It Stands Out
+
+- It blends learning, practice, and support in one place.
+- It treats AI and code execution honestly, with clear demo/disabled states when services are unavailable.
+- It is structured like a product experience, not just a content dump.
+
+## ✅ Current Status
 
 The repository is in a strong demo and portfolio state.
 
@@ -32,7 +39,7 @@ The repository is in a strong demo and portfolio state.
 - Code execution works only when a Judge0 service is available. If Judge0 is not reachable, the UI keeps execution clearly disabled instead of pretending it works.
 - The repo also contains some legacy and preview-only pages that are not the primary production surface.
 
-## Core Features
+## 🎯 Core Features
 
 - User authentication with JWT-based sessions
 - Protected dashboard and profile flows
@@ -42,7 +49,7 @@ The repository is in a strong demo and portfolio state.
 - Contact and support flow
 - Responsive React frontend for desktop and mobile
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - Frontend: React, TypeScript, Vite, Tailwind CSS
 - Backend: FastAPI, Python
@@ -51,7 +58,7 @@ The repository is in a strong demo and portfolio state.
 - Testing: Vitest, Playwright, Pytest
 - Optional integrations: Google OAuth, Gemini, Judge0, SMTP
 
-## Portfolio Highlights
+## 🌟 Portfolio Highlights
 
 | Area | Highlight |
 | --- | --- |
@@ -60,7 +67,7 @@ The repository is in a strong demo and portfolio state.
 | AI Layer | Uses live Gemini when available and clearly falls back to `Demo Mode AI` when it is not |
 | Reliability | Protected routes, enrollment flow, contact flow, and verified frontend/backend test setup |
 
-## Architecture
+## 🧩 Architecture
 
 ```mermaid
 flowchart LR
@@ -72,7 +79,7 @@ flowchart LR
     B --> G["Google OAuth"]
 ```
 
-## Resume-Ready Highlights
+## 📄 Resume-Ready Highlights
 
 - Built a full-stack edtech platform using React, TypeScript, FastAPI, and MongoDB.
 - Implemented secure authentication, protected routes, course enrollment, dashboard flows, and contact support.
@@ -80,7 +87,7 @@ flowchart LR
 - Added production-oriented handling for environment-dependent services such as Judge0, Google OAuth, and email delivery.
 - Verified the project using frontend lint/build/tests, UI smoke checks, and backend pytest coverage.
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 PyMastery/
@@ -93,11 +100,11 @@ PyMastery/
 \-- scripts/        Utility and verification scripts
 ```
 
-## Screenshots
+## 📸 Screenshots
 
 Current UI snapshots from the repository.
 
-### Desktop
+### 🖥️ Desktop
 
 | Home | Dashboard |
 | --- | --- |
@@ -107,7 +114,7 @@ Current UI snapshots from the repository.
 | --- | --- |
 | ![Login Desktop](./ui-check/login_desktop_full_v2.png) | ![Home Desktop Full](./ui-check/home_desktop_full_v2.png) |
 
-### Mobile
+### 📱 Mobile
 
 | Home Mobile | Dashboard Mobile |
 | --- | --- |
@@ -117,14 +124,14 @@ Current UI snapshots from the repository.
 | --- | --- |
 | ![Login Mobile](./ui-check/login_mobile_full_v2.png) | ![Home Mobile Full](./ui-check/home_mobile_full_v2.png) |
 
-## Future Scope
+## 🔮 Future Scope
 
 - Enable fully live AI support without quota-based demo fallback.
 - Restore live Judge0-backed execution in environments where the service is available.
 - Expand real user progress analytics and reduce remaining sample-data surfaces.
 - Continue trimming preview-only and legacy modules to keep the production surface tighter.
 
-## Local Setup
+## ⚙️ Local Setup
 
 ### 1. Backend
 
@@ -160,7 +167,7 @@ npm run dev
 - Backend docs: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 - Health check: [http://127.0.0.1:8000/api/health](http://127.0.0.1:8000/api/health)
 
-## Required Environment Variables
+## 🔐 Required Environment Variables
 
 ### Backend
 
@@ -182,7 +189,7 @@ npm run dev
 - Judge0: `JUDGE0_API_URL`, `JUDGE0_API_KEY`, `JUDGE0_HOST`
 - Email/SMTP: `SMTP_HOST` or `SMTP_SERVER`, `SMTP_PORT`, `SMTP_USERNAME` or `SMTP_USER`, `SMTP_PASSWORD`
 
-## Testing
+## 🧪 Testing
 
 ### Frontend
 
@@ -201,14 +208,14 @@ cd backend
 pytest -q
 ```
 
-## Notes
+## 📝 Notes
 
 - Do not commit `.env` files or secret keys.
 - If Gemini is unavailable, the app will show `Demo Mode AI`.
 - If Judge0 is unavailable, code execution stays disabled with a clear user-facing message.
 - If email or OAuth are not configured, the app degrades gracefully and reports that status honestly.
 
-## Documentation
+## 📚 Documentation
 
 - [Docs Index](./docs/README.md)
 - [API Docs Guide](./docs/API.md)
