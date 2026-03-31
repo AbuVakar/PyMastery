@@ -100,30 +100,6 @@ PyMastery/
 \-- scripts/        Utility and verification scripts
 ```
 
-## 📸 Screenshots
-
-Current UI snapshots from the repository.
-
-### 🖥️ Desktop
-
-| Home | Dashboard |
-| --- | --- |
-| ![Home Page](./ui-check/home_desktop.png) | ![Dashboard](./ui-check/dashboard_desktop.png) |
-
-| Login | Home Full View |
-| --- | --- |
-| ![Login Desktop](./ui-check/login_desktop_full_v2.png) | ![Home Desktop Full](./ui-check/home_desktop_full_v2.png) |
-
-### 📱 Mobile
-
-| Home Mobile | Dashboard Mobile |
-| --- | --- |
-| ![Home Mobile](./ui-check/home_mobile.png) | ![Dashboard Mobile](./ui-check/dashboard_mobile.png) |
-
-| Login Mobile | Home Mobile Full View |
-| --- | --- |
-| ![Login Mobile](./ui-check/login_mobile_full_v2.png) | ![Home Mobile Full](./ui-check/home_mobile_full_v2.png) |
-
 ## 🔮 Future Scope
 
 - Enable fully live AI support without quota-based demo fallback.
