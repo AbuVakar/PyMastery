@@ -149,6 +149,46 @@ PyMastery/
 \-- scripts/        Utility and verification scripts
 ```
 
+## 📸 Screenshot Placeholder
+
+If you want to showcase the UI later, add your final screenshots and replace the paths in the template below.
+
+### Recommended Screenshot Set
+
+| Screen | Suggested File Name |
+| --- | --- |
+| Home Page | `docs/screenshots/home.png` |
+| Dashboard | `docs/screenshots/dashboard.png` |
+| Course Page | `docs/screenshots/course-page.png` |
+| Problems Page | `docs/screenshots/problems.png` |
+| AI Assistant | `docs/screenshots/ai-chat.png` |
+| Mobile View | `docs/screenshots/mobile-view.png` |
+
+<details>
+  <summary><strong>Ready-to-use screenshot section template</strong></summary>
+
+```md
+## 📸 Product Preview
+
+### Main Screens
+
+| Home | Dashboard |
+| --- | --- |
+| ![Home Page](./docs/screenshots/home.png) | ![Dashboard](./docs/screenshots/dashboard.png) |
+
+| Courses | Problems |
+| --- | --- |
+| ![Course Page](./docs/screenshots/course-page.png) | ![Problems Page](./docs/screenshots/problems.png) |
+
+### Feature Highlights
+
+| AI Assistant | Mobile View |
+| --- | --- |
+| ![AI Assistant](./docs/screenshots/ai-chat.png) | ![Mobile View](./docs/screenshots/mobile-view.png) |
+```
+
+</details>
+
 ## ⚙️ Local Setup
 
 ### 1. Backend
