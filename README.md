@@ -60,6 +60,26 @@ The repository is in a strong demo and portfolio state.
 | AI Layer | Uses live Gemini when available and clearly falls back to `Demo Mode AI` when it is not |
 | Reliability | Protected routes, enrollment flow, contact flow, and verified frontend/backend test setup |
 
+## Architecture
+
+```mermaid
+flowchart LR
+    A["React + TypeScript Frontend"] --> B["FastAPI Backend"]
+    B --> C["MongoDB"]
+    B --> D["Gemini AI"]
+    B --> E["Judge0"]
+    B --> F["SMTP / Email Service"]
+    B --> G["Google OAuth"]
+```
+
+## Resume-Ready Highlights
+
+- Built a full-stack edtech platform using React, TypeScript, FastAPI, and MongoDB.
+- Implemented secure authentication, protected routes, course enrollment, dashboard flows, and contact support.
+- Integrated AI-assisted tutoring with clear demo-mode fallback behavior when provider limits or configuration block live responses.
+- Added production-oriented handling for environment-dependent services such as Judge0, Google OAuth, and email delivery.
+- Verified the project using frontend lint/build/tests, UI smoke checks, and backend pytest coverage.
+
 ## Project Structure
 
 ```text
@@ -96,6 +116,13 @@ Current UI snapshots from the repository.
 | Login Mobile | Home Mobile Full View |
 | --- | --- |
 | ![Login Mobile](./ui-check/login_mobile_full_v2.png) | ![Home Mobile Full](./ui-check/home_mobile_full_v2.png) |
+
+## Future Scope
+
+- Enable fully live AI support without quota-based demo fallback.
+- Restore live Judge0-backed execution in environments where the service is available.
+- Expand real user progress analytics and reduce remaining sample-data surfaces.
+- Continue trimming preview-only and legacy modules to keep the production surface tighter.
 
 ## Local Setup
 
