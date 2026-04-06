@@ -1,0 +1,8 @@
+version: '3'
+services:
+  pymastery-mcp:
+    build: .
+    container_name: pymastery_mcp
+    ports:
+      - "8000:8000"
+    restart: always
